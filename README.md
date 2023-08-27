@@ -84,21 +84,3 @@ Sources
 medium.com/@django.course/why-django-is-the-best-web-framework-for-charting-uncharted-territory-db5222c37d5d
 
 
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /c/Users/Lenovo/.ssh/id_rsa
-Your public key has been saved in /c/Users/Lenovo/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:v7o9dPljoAJ0bkAcZsqukgEOlxzvwFEjVAUUwNHLWqc getnarendra@gmail.com
-The key's randomart image is:
-+---[RSA 4096]----+
-| oBBB==.         |
-| o.B.=o          |
-|o *.+o           |
-|+. ++ + .        |
-|.. oo+ +S    .   |
-| o..E . o.. +    |
-|o .    o ..o o   |
-| .      ..o.  +  |
-|        o+o. . . |
-+----[SHA256]-----+
