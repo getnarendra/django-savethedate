@@ -1,0 +1,30 @@
+{% load static %}  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Load your custom CSS file -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Main Page</h1>
+        </header>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="/admin/">Admin</a></li>
+                <li><a href="/save_the_date/date/">Date</a></li>
+                <li><a href="/save_the_date/questions/">Questions</a></li>
+                <li><a href="/save_the_date/question/create/">Create</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <p>This is the default content for your page.</p>
+        </main>
+    </div>
+</body>
+</html>

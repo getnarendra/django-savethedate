@@ -1,0 +1,49 @@
+{% load static %}  <!-- Load the static template tag -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Update Question</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Load your custom CSS file -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/save_the_date/date/">Date</a></li>
+                    <li><a href="/save_the_date/questions/">Questions</a></li>
+                    <li><a href="/save_the_date/question/create/">Create Question</a></li>
+                </ul>
+            </nav>
+            <h1>List Questions</h1>
+        </header>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Question Text</th>
+                <th>Pub Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ question.id }}</td>
+                <td>{{ question.question_text }}</td>
+                <td>{{ question.pub_date }}</td>
+                <td><a href="/save_the_date/question/update/{{ question.id }}">Edit</a></td>
+                <td><a href="/save_the_date/question/delete/{{ question.id }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="/save_the_date/question/create">Add New</a></p>
+    </div>
+</body>
+</html>

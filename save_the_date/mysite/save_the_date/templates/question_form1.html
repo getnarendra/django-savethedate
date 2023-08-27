@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create or Update Question</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Create or Update Question</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <!-- Use input type="datetime-local" for the date-time picker -->
+        <div class="form-group">
+            <label for="{{ form.pub_date.id_for_label }}">Publication Date and Time:</label>
+            <!-- <input type="datetime-local" class="form-control" name="{{ form.pub_date.name }}" id="{{ form.pub_date.id_for_label }}"> -->
+            <input type="datetime-local" class="form-control" name="{{ form.pub_date }}" id="{{ form.pub_date }}">
+        </div>
+        
+        <button type="submit">Save</button>
+    </form>
+    
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
